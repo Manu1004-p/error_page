@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+    z-index:10;
+}
+
+.error{
+    font-size:120px;
+    letter-spacing:8px;
+    animation:glow 2s infinite alternate;
+}
+
+h2{
+    margin:10px 0;
+}
+
+p{
+    margin-bottom:20px;
+    opacity:0.8;
+}
+
+.btn{
+    text-decoration:none;
+    padding:12px 25px;
+    background:#00ffd5;
+    color:black;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* Glow animation */
+@keyframes glow{
+    from{ text-shadow:0 0 10px #00ffd5; }
+    to{ text-shadow:0 0 30px #00ffd5,0 0 60px #00ffd5; }
+}
+
+/* Floating circles */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.1);
+    animation:float 8s infinite ease-in-out;
+}
+
+.c1{
+    width:120px;
+    height:120px;
+    top:10%;
+    left:10%;
+}
+
+.c2{
+    width:80px;
+    height:80px;
+    bottom:20%;
+    right:15%;
+    animation-delay:2s;
+}
+
+.c3{
+    width:60px;
+    height:60px;
+    top:70%;
+    left:40%;
+    animation-delay:4s;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-30px);}
+    100%{transform:translateY(0);}
+}
